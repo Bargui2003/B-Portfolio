@@ -1,91 +1,19 @@
 <div class="min-h-screen bg-gray-50 text-gray-800">
-  <!-- Header Section -->
-  <header class="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white py-5">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-3xl font-bold">Mon Portfolio</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:underline">À propos</a>
-        <a href="#projects" class="hover:underline">Projets</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-b from-gray-50 to-gray-200">
-    <h2 class="text-4xl font-extrabold mb-6">
-      Bonjour, je suis <span class="text-orange-500">Mohamed Dhia Bargui</span>
-    </h2>
-    <p class="text-xl mb-8 max-w-2xl mx-auto">
-      Développeur passionné par la création d'expériences web/mobile modernes et intuitives.
-    </p>
-    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-      <a
-        href="#projects"
-        class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-600 transition">
-        Voir mes projets
-      </a>
-      <a
-        href="/assets/Cv.pdf" 
-        target="_blank"
-        class="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-900 transition">
-        Voir mon CV
-      </a>
-      <a
-        href="/assets/Cv.pdf" 
-        download="Cv.pdf"
-        class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
-        Télécharger mon CV
-      </a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-semibold mb-6">À propos de moi</h3>
-      <p class="text-lg max-w-xl mx-auto">
-        Je suis un développeur full-stack spécialisé dans Angular, Tailwind CSS et le développement d'applications modernes et responsives.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-semibold mb-10">Mes Projets</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Project Image"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h4 class="text-xl font-bold mb-2">Projet 1</h4>
-            <p class="text-gray-600">Description rapide du projet.</p>
-          </div>
-        </div>
-        <!-- Ajouter d'autres cartes pour vos projets -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gradient-to-t from-orange-500 to-red-500 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-semibold mb-6">Contactez-moi</h3>
-      <p class="mb-8">Vous souhaitez collaborer ou discuter ? Envoyez-moi un message !</p>
-      <a
-        href="mailto:mohameddhiabargui@gmail.com"
-        class="bg-white text-orange-500 px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 transition">
-        Envoyer un email
-      </a>
-    </div>
-  </section>
-
+  <!-- Header -->
+   <div>
+    <router-outlet></router-outlet>
+    <app-header></app-header>
+   </div>
+  <!-- content  -->
+  <div>
+    <router-outlet></router-outlet>
+    <app-content></app-content>
+   </div>
+  
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-400 py-4 text-center">
-    <p>&copy; 2024 Mohamed Dhia Bargui. Tous droits réservés.</p>
-  </footer>
-</div>
+  <div>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+  
+
